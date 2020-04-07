@@ -36,6 +36,24 @@ namespace Math{
         double t = Pow(i, n/2);
         return t * t * Pow(i, n%2);
     }
+    namespace NumberTheory {
+        int gcd(int a, int b) {
+            while(b) {
+                int r = a%b;
+                a=b, b=r;
+            }
+            return a;
+        }
+        int reverseModBrute(int a, int n) {
+            //brute
+            for (int i = 1; i < n; i++){
+                if (a * i % n == 1) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+    }
 }
 
 
@@ -43,6 +61,9 @@ int main () {
     cout<< Math::SumOfSquare(2)<<endl;
     cout<< Math::SumOfCube(2)<<endl;
     cout<< Math::Pow(2,2)<<endl;
+    cout<< Math::NumberTheory::gcd(5,3)<<endl;
+    cout<< Math::NumberTheory::gcd(6,3)<<endl;
+    cout<< Math::NumberTheory::reverseModeBrute(14,3)<<endl;
 }
 
 
