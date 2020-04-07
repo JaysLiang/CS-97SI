@@ -53,6 +53,10 @@ namespace Math{
             }
             return -1;
         }
+        int reverseMod(int a, int n) {
+            //
+        }
+
     }
 }
 
@@ -63,7 +67,7 @@ int main () {
     cout<< Math::Pow(2,2)<<endl;
     cout<< Math::NumberTheory::gcd(5,3)<<endl;
     cout<< Math::NumberTheory::gcd(6,3)<<endl;
-    cout<< Math::NumberTheory::reverseModeBrute(14,3)<<endl;
+    cout<< Math::NumberTheory::reverseModBrute(14,3)<<endl;
 }
 
 
