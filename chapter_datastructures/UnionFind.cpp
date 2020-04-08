@@ -22,6 +22,14 @@ namespace DataStructure{
                 data = nullptr;
             }
         }
+        int find_with_reroot(int x) {
+            if (x == data[x]) {
+                return x;
+            }
+            int root  = find(x);
+            data[x] = root;
+            return root;
+        }
         int find(int x) {
             while(x != data[x]) {
                 x = data[x];
@@ -49,6 +57,4 @@ int main() {
     unionSet.Union(1,5);
     cout<< unionSet.find(1) <<endl;
     cout<< unionSet.find(3) <<endl;
-
-
 }
